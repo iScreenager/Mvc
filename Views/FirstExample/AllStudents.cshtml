@@ -1,0 +1,35 @@
+﻿@model List<RecapMvc.Models.Student>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AllStudents</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 25%;
+            box-shadow: 3px 3px 3px green;
+            margin: 5px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>List of Students Enrolled</h1>
+    <hr/>
+    @foreach(var student in Model)
+    {
+        <div>
+            <h2>The Student : @student.Name</h2>
+            <hr />
+            <p>The Student ID: @student.StudentId</p>
+            <p>The Address: @student.Address</p>
+        </div>
+    }
+</body>
+</html>

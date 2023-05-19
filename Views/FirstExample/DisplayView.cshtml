@@ -1,0 +1,29 @@
+﻿@using RecapMvc.Models;
+@model Student//Tells that the model for this View is Student object. 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayView</title>
+    <style>
+        div{
+            display: inline-block;
+            width : 25%;
+            box-shadow : 3px 3px 3px green
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>The Student : @Model.Name</h2>
+        <hr/>
+        <p>The Student ID: @Model.StudentId</p>
+        <p>The Address: @Model.Address</p>
+    </div>
+</body>
+</html>
